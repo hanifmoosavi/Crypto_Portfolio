@@ -110,7 +110,7 @@
   <script>
     const cryptos = [
       { name: "Bitcoin", symbol: "FIL", apiId: "filecoin", amount: 1918 },
-      { name: "Ethereum", symbol: "MBOX", apiId: "mbox", amount: 2822 },
+      { name: "Ethereum", symbol: "MBOX", apiId: "mobox", amount: 2822 },
       { name: "Filecoin", symbol: "FLOKI", apiId: "floki", amount: 715.011 }
     ];
 
@@ -124,7 +124,7 @@
         const usdToIrr = parseFloat(exchangeRateInput);
         const usdToToman = usdToIrr / 10;
 
-        const cryptoApiUrl = "https://api.coingecko.com/api/v3/simple/price?ids=filecoin,mbox,floki&vs_currencies=usd&include_24hr_change=true";
+        const cryptoApiUrl = "https://api.coingecko.com/api/v3/simple/price?ids=filecoin,mobox,floki&vs_currencies=usd&include_24hr_change=true";
         const cryptoResponse = await fetch(cryptoApiUrl);
         const cryptoData = await cryptoResponse.json();
 
